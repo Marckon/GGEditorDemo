@@ -17,8 +17,8 @@ class NodeDetail extends React.Component{
         /*
     * antd规定form组件自带this.props属性,
     * form：即Form，对象类型（来自antd）
-    * getSelected：获取当前选中的图项（来自ggeditor）
-    * updateItem：更行图项（来自ggeditor）
+    * getSelected：获取当前选中的图项（来自ggeditor，ggeditor继承自g6editor）
+    * updateItem：更行图项（来自ggeditor，ggeditor继承自g6editor）
     * */
         const {form,getSelected,updateItem}=this.props
 

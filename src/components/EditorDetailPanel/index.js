@@ -8,7 +8,7 @@ import {
     DetailPanel
 } from 'gg-editor';
 import NodeDetail from '../NodeDetail';
-import styles from './index.scss'
+import styles from './index.scss';
 
 class FlowDetailPanel extends React.Component{
     render(){
