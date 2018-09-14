@@ -1,10 +1,10 @@
 import React from 'react';
-import GGEditor from 'gg-editor';
+import GGEditor, {Flow}from 'gg-editor';
 import {Row,Col} from 'antd';
 import FlowToolbar from '../../components/EditorToolbar';
 import EditorItemPanel from '../../components/EditorItemPanel';
+import FlowDetailPanel from '../../components/EditorDetailPanel';
 import styles from './index.scss';
-import {Flow} from 'gg-editor';
 
 class FlowPage extends React.Component{
     render(){
@@ -22,7 +22,9 @@ class FlowPage extends React.Component{
                 <Col span={16} className={styles.editorContent}>
                     <Flow className={styles.flow}/>
                 </Col>
-                <Col span={4} className={styles.editorSidebar}/>
+                <Col span={4} className={styles.editorSidebar}>
+                    <FlowDetailPanel/>
+                </Col>
             </Row>
         </GGEditor>
         );
