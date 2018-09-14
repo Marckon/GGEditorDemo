@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad8c24e6-77dd-41df-a670-72a7702d6b18" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/EditorDetailPanel/index.js" afterPath="$PROJECT_DIR$/src/components/EditorDetailPanel/index.js" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -49,7 +50,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/EditorDetailPanel/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="713">
@@ -57,6 +58,16 @@
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -139,6 +150,7 @@
         <option value="$PROJECT_DIR$/src/components/NodeDetail/index.js" />
         <option value="$PROJECT_DIR$/src/components/EdgeDetail/index.js" />
         <option value="$PROJECT_DIR$/src/components/EditorDetailPanel/index.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -290,7 +302,7 @@
       <workItem from="1536804718687" duration="22525000" />
       <workItem from="1536844091027" duration="23000" />
       <workItem from="1536844123000" duration="4020000" />
-      <workItem from="1536888818339" duration="13994000" />
+      <workItem from="1536888818339" duration="14438000" />
     </task>
     <task id="LOCAL-00001" summary="construct toolbar component">
       <created>1536843624660</created>
@@ -303,7 +315,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69447000" />
+    <option name="totallyTimeSpent" value="69891000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -567,13 +579,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ToolButton/index.js" />
     <entry file="file://$PROJECT_DIR$/1.html" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tools/webpack.config.base.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -713,6 +718,14 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
