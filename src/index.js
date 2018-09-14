@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Flow from './pages/Flow'
+import FlowPage from './pages/Flow'
 
 ReactDOM.render(
-    <Flow/>,
+    <FlowPage/>,
     document.getElementById('root')
 );

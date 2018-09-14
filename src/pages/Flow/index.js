@@ -4,8 +4,9 @@ import {Row,Col} from 'antd';
 import FlowToolbar from '../../components/EditorToolbar';
 import EditorItemPanel from '../../components/EditorItemPanel';
 import styles from './index.scss';
+import {Flow} from 'gg-editor';
 
-class Flow extends React.Component{
+class FlowPage extends React.Component{
     render(){
         return(
         <GGEditor className={styles.editor}>
@@ -18,16 +19,14 @@ class Flow extends React.Component{
                 <Col span={4} className={styles.editorSidebar}>
                     <EditorItemPanel/>
                 </Col>
-            </Row>
-            <Row>
-                <Col span={16}/>
-            </Row>
-            <Row>
-                <Col span={4}/>
+                <Col span={16} className={styles.editorContent}>
+                    <Flow className={styles.flow}/>
+                </Col>
+                <Col span={4} className={styles.editorSidebar}/>
             </Row>
         </GGEditor>
         );
     }
 }
 
-export default Flow;
+export default FlowPage;
