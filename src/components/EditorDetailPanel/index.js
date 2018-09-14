@@ -8,6 +8,7 @@ import {
     DetailPanel
 } from 'gg-editor';
 import NodeDetail from '../NodeDetail';
+import EdgeDetail from '../EdgeDetail';
 import styles from './index.scss';
 
 class FlowDetailPanel extends React.Component{
@@ -17,6 +18,9 @@ class FlowDetailPanel extends React.Component{
                 <NodePanel>
                     <NodeDetail/>
                 </NodePanel>
+                <EdgePanel>
+                    <EdgeDetail/>
+                </EdgePanel>
             </DetailPanel>
         )
     }
