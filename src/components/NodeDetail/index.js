@@ -33,7 +33,7 @@ class NodeDetail extends React.Component{
             if(!item) return;
 
             values.size=`${values.width}*${values.height}`;
-            values.color=values.color.color
+            values.color=values.color.color?values.color.color:values.color
 
             updateItem(item,{
                 ...values
@@ -66,12 +66,12 @@ class NodeDetail extends React.Component{
                         {
                             getFieldDecorator('width',{
                                 initialValue:this.props.getSelected()[0].getModel().size.split('*')[0]
-                            })(<InputNumber onBlur={this.handleSubmit} />)
+                            })(<InputNumber onChange={this.handleSubmit} />)
                         }
                         {
                             getFieldDecorator('height',{
                                 initialValue:this.props.getSelected()[0].getModel().size.split('*')[1]
-                            })(<InputNumber onBlur={this.handleSubmit} />)
+                            })(<InputNumber onChange={this.handleSubmit} />)
                         }
                     </Item>
                     <Item label={'颜色'} {...inlineFormItemLayout}>
