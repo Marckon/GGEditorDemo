@@ -4,6 +4,7 @@ import {Row,Col} from 'antd';
 import FlowToolbar from '../../components/EditorToolbar';
 import EditorItemPanel from '../../components/EditorItemPanel';
 import FlowDetailPanel from '../../components/EditorDetailPanel';
+import FlowContextMenu from '../../components/FlowContextMenu';
 import styles from './index.scss';
 
 class FlowPage extends React.Component{
@@ -26,6 +27,7 @@ class FlowPage extends React.Component{
                     <FlowDetailPanel/>
                 </Col>
             </Row>
+            <FlowContextMenu/>
         </GGEditor>
         );
     }
