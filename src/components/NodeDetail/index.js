@@ -1,5 +1,7 @@
 import React from 'react';
-import {Card,Form,Input} from 'antd';
+import {Card,Form,Input,InputNumber} from 'antd';
+import ColorPicker from 'rc-color-picker';
+import 'rc-color-picker/assets/index.css';
 
 const {Item}=Form;
 
@@ -30,6 +32,9 @@ class NodeDetail extends React.Component{
 
             if(!item) return;
 
+            values.size=`${values.width}*${values.height}`;
+            values.color=values.color.color
+
             updateItem(item,{
                 ...values
             });
@@ -55,6 +60,29 @@ class NodeDetail extends React.Component{
                             getFieldDecorator('label',{
                                 initialValue:label
                             })(<Input onBlur={this.handleSubmit}/>)
+                        }
+                    </Item>
+                    <Item label={'尺寸'} {...inlineFormItemLayout}>
+                        {
+                            getFieldDecorator('width',{
+                                initialValue:this.props.getSelected()[0].getModel().size.split('*')[0]
+                            })(<InputNumber onBlur={this.handleSubmit} />)
+                        }
+                        {
+                            getFieldDecorator('height',{
+                                initialValue:this.props.getSelected()[0].getModel().size.split('*')[1]
+                            })(<InputNumber onBlur={this.handleSubmit} />)
+                        }
+                    </Item>
+                    <Item label={'颜色'} {...inlineFormItemLayout}>
+                        {
+                            getFieldDecorator('color',{
+                                initialValue:this.props.getSelected()[0].getModel().color
+                            })(<ColorPicker
+                                color={this.props.getSelected()[0].getModel().color}
+                                animation={'slide-up'}
+                                onChange={this.handleSubmit}
+                                mode={'HSB'}/>)
                         }
                     </Item>
                 </Form>
