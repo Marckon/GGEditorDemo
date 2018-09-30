@@ -2,6 +2,7 @@ import React from 'react';
 import {Card,Form,Input,InputNumber} from 'antd';
 import ColorPicker from 'rc-color-picker';
 import 'rc-color-picker/assets/index.css';
+import {withPropsAPI} from 'gg-editor';
 
 const {Item}=Form;
 
@@ -22,29 +23,31 @@ class NodeDetail extends React.Component{
     * getSelected：获取当前选中的图项（来自ggeditor，ggeditor继承自g6editor）
     * updateItem：更行图项（来自ggeditor，ggeditor继承自g6editor）
     * */
-        const {form,getSelected,updateItem}=this.props
+        const {form,propsAPI}=this.props;
+        const {getSelected,update}=propsAPI;
 
         //validateFieldAndScroll：antd规定的this.props.form的方法——校验，如果校验不通过，自动滚进可见范围
         form.validateFieldsAndScroll((err,values)=>{
             if(err) return;
 
-            const item=getSelected()[0]
+            const item=getSelected()[0];
 
             if(!item) return;
 
             values.size=`${values.width}*${values.height}`;
             values.color=values.color.color?values.color.color:values.color
 
-            updateItem(item,{
+            update(item,{
                 ...values
             });
         });
     };
 
     render(){
-        const {form,getSelected}=this.props;
+        const {form,propsAPI}=this.props;
         //getFieldDecorator：用于和表单进行双向绑定
         const {getFieldDecorator}=form;
+        const {getSelected}=propsAPI;
 
         const item=getSelected()[0]
 
@@ -65,21 +68,21 @@ class NodeDetail extends React.Component{
                     <Item label={'尺寸'} {...inlineFormItemLayout}>
                         {
                             getFieldDecorator('width',{
-                                initialValue:this.props.getSelected()[0].getModel().size.split('*')[0]
+                                initialValue:getSelected()[0].getModel().size.split('*')[0]
                             })(<InputNumber onKeyUp={this.handleSubmit} />)
                         }
                         {
                             getFieldDecorator('height',{
-                                initialValue:this.props.getSelected()[0].getModel().size.split('*')[1]
+                                initialValue:getSelected()[0].getModel().size.split('*')[1]
                             })(<InputNumber onKeyUp={this.handleSubmit} />)
                         }
                     </Item>
                     <Item label={'颜色'} {...inlineFormItemLayout}>
                         {
                             getFieldDecorator('color',{
-                                initialValue:this.props.getSelected()[0].getModel().color
+                                initialValue:getSelected()[0].getModel().color
                             })(<ColorPicker
-                                color={this.props.getSelected()[0].getModel().color}
+                                color={getSelected()[0].getModel().color}
                                 animation={'slide-up'}
                                 onChange={this.handleSubmit}
                                 mode={'HSB'}/>)
@@ -92,4 +95,4 @@ class NodeDetail extends React.Component{
 }
 
 
-export default Form.create()(NodeDetail);
+export default Form.create()(withPropsAPI(NodeDetail));
