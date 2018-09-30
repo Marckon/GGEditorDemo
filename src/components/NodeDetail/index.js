@@ -66,12 +66,12 @@ class NodeDetail extends React.Component{
                         {
                             getFieldDecorator('width',{
                                 initialValue:this.props.getSelected()[0].getModel().size.split('*')[0]
-                            })(<InputNumber onChange={this.handleSubmit} />)
+                            })(<InputNumber onKeyUp={this.handleSubmit} />)
                         }
                         {
                             getFieldDecorator('height',{
                                 initialValue:this.props.getSelected()[0].getModel().size.split('*')[1]
-                            })(<InputNumber onChange={this.handleSubmit} />)
+                            })(<InputNumber onKeyUp={this.handleSubmit} />)
                         }
                     </Item>
                     <Item label={'颜色'} {...inlineFormItemLayout}>
