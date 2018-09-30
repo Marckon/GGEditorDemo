@@ -11,6 +11,7 @@ import {Card} from 'antd';
 import NodeDetail from '../NodeDetail';
 import EdgeDetail from '../EdgeDetail';
 import styles from './index.scss';
+import CanvasDetail from '../CanvasDetail';
 
 class FlowDetailPanel extends React.Component{
     render(){
@@ -29,7 +30,7 @@ class FlowDetailPanel extends React.Component{
                     <Card title={'多选属性'}/>
                 </MultiPanel>
                 <CanvasPanel>
-                    <Card title={'画布属性'}/>
+                    <CanvasDetail/>
                 </CanvasPanel>
             </DetailPanel>
         )
